@@ -1,0 +1,115 @@
+Deep Dive into SQL, Excel & Python for Data Analysis:
+=====================================================
+📘 Lesson 1: SQL - SELECT Statement
+🔍 Summary:
+SELECT is used to retrieve specific columns from a table.
+
+🧠 Real-World Example:
+At Zomato, get a list of all orders:
+
+SELECT order_id, customer_id, order_amount FROM orders;
+
+📘 Lesson 2: SQL - WHERE Clause:
+================================
+🔍 Summary:
+WHERE filters rows based on conditions.
+
+🧠 Real-World Example:
+Get all Hyderabad-based customers:
+
+SELECT * FROM customers WHERE city = 'Hyderabad';
+
+📘 Lesson 3: SQL - INNER JOIN:
+==============================
+🔍 Summary:
+Combines data from multiple tables based on common keys.
+
+🧠 Real-World Example:
+Join orders and customers to get customer names for each order:
+
+SELECT o.order_id, c.name 
+FROM orders o 
+JOIN customers c ON o.customer_id = c.customer_id;
+
+📘 Lesson 4: Excel – VLOOKUP & XLOOKUP:
+=======================================
+🔍 Summary:
+Used to find data in a different sheet or range.
+
+🧠 Real-World Example:
+In sales tracking, fetch region name using product ID:
+
+=VLOOKUP(A2, Products!A:B, 2, FALSE)
+
+📘 Lesson 5: Excel – IF, COUNTIF, SUMIF:
+========================================
+🔍 Summary:
+These apply logic to data processing and conditional calculations.
+
+🧠 Real-World Example:
+Count how many orders were above ₹1000:
+
+=COUNTIF(B2:B100, ">1000")
+
+📘 Lesson 6: Excel – Pivot Tables:
+==================================
+🔍 Summary:
+Group and summarize large datasets in a few clicks.
+
+🧠 Real-World Example:
+At Flipkart, use Pivot Tables to analyze:
+
+Sales by month
+
+Orders by region
+
+📘 Lesson 7: Python – Pandas DataFrames:
+========================================
+🔍 Summary:
+DataFrames are core table-like structures in Pandas.
+
+🧠 Real-World Example:
+Load product data and filter:
+
+import pandas as pd
+df = pd.read_csv("products.csv")
+df[df['price'] > 500]
+
+📘 Lesson 8: Python – GroupBy and Aggregation:
+==============================================
+🔍 Summary:
+Used to summarize data based on a category.
+
+🧠 Real-World Example:
+Total sales by product category:
+
+df.groupby("category")["sales"].sum()
+
+📘 Lesson 9: Power BI – Bar, Line, and Pie Charts:
+==================================================
+🔍 Summary:
+These charts are used to tell visual stories from data.
+
+🧠 Real-World Example:
+Create a dashboard for:
+
+Line Chart: Sales over months
+
+Pie Chart: Product category split
+
+Bar Chart: Orders by region
+
+📘 Lesson 10: Case Study – Regional Sales Insights:
+===================================================
+🔍 Summary:
+Use data cleaning + SQL + Excel + Power BI to build a business-ready sales report.
+
+🧠 Real-World Example:
+SQL: Extract regional sales
+
+Excel: Clean data, apply formulas
+
+Power BI: Dashboard for executive team
+
+✅ That completes Day 4 with 10+ power-packed, job-focused lessons.
+
